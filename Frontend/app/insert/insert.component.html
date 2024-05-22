@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insert Student Data</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .form-container {
+      max-width: 500px;
+      margin: 50px auto;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .form-container h3 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container form-container">
+  <h3>Insert Student Data</h3>
+  <form #insertform="ngForm" (ngSubmit)="insertdata(insertform)">
+    <div class="form-group">
+      <label for="sid">Student ID:</label>
+      <input type="number" class="form-control" id="sid" #sid (ngModel)="sid" name="sid" required>
+    </div>
+    <div class="form-group">
+      <label for="sname">Student Name:</label>
+      <input type="text" class="form-control" id="sname" #sname (ngModel)="sname" name="sname" required>
+    </div>
+    <div class="form-group">
+      <label for="sper">Student Percent:</label>
+      <input type="number" class="form-control" id="sper" #sper (ngModel)="sper" name="sper" required>
+    </div>
+    <button type="submit" class="btn btn-primary btn-block">Insert</button>
+  </form>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
